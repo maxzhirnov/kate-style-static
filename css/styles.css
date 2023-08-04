@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Courier Prime";
+    src: url('static/Courier_Prime/CourierPrime-Regular.ttf') format('truetype');
+  }
+  
+  
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #FAF9F6;
+    }
+    
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Заголовок */
+  
+  
+  header {
+    margin-top:50px;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    text-align: center;
+    font-size: 40;
+    font-family: "Courier Prime", Courier, monospace;
+    font-weight: 100;
+    color: #555151;
+  }
+  
+  /* Контент */
+
+  .content {
+    max-width: 960px;
+    padding: 0;
+  }
+
+  .content .row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .content .row .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 460px;
+  }
+
+  .content .row .col .right {
+    height: 278px;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  .content .row .col .img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: absolute;
+  }
+
+  .content .row .col .right img {
+    width: 100%;
+    height: auto;
+    display: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+  }
+  
+  
+  
+  /* Контакты */
+  footer {
+    margin-top: 50px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  
+  footer a {
+    color: inherit;      /* наследовать цвет текста от родителя */
+    text-decoration: none; /* убрать подчеркивание */
+    background-color: transparent; /* прозрачный фон */
+    cursor: pointer; /* изменить курсор на указатель */
+  }
+  
+  @media screen and (max-width: 600px) {
+    header {
+      margin-top: 20px;
+    }
+    header h1 {
+      font-size: 20px;
+    }
+
+      /* Контент */
+      .content .row {
+        flex-direction: column;
+      }
+
+      .content .row .col .right {
+        height: auto;
+      }
+
+      .content .row .col .right img {
+        top: auto;
+        transform: none;
+      }
+  }
+    
