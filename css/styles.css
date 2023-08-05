@@ -62,6 +62,7 @@
     max-width: 460px;
   }
 
+  
   .content .row .col .right {
     height: 278px;
     overflow: hidden;
@@ -97,20 +98,35 @@
     transform: translateY(-20%);
   }
 
-  .img-wrapper.set {
-    max-height: 300px;
-    overflow: hidden;
-    position: relative;
-  }
+  .row.set {
+    display: flex;
+    gap: 1rem; /* Spacing between columns */
+    flex-wrap: wrap; /* This allows the items to wrap onto the next line */
+}
 
-  .img-wrapper.set img {
+.col.set {
+    flex: 1; /* This ensures each column takes equal space */
+    min-width: calc(33.33% - 1rem); /* Minus 1rem to account for the gap */
+}
+
+.img-wrapper.set {
     width: 100%;
-    height: auto;
-    display: absolute;
-    top: 50%;
-    transform: translateY(-20%);
-  }
-  
+    padding-bottom: 100%; /* This creates a square aspect ratio */
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper.set img {
+  width: 100%;   /* Set width to 100% */
+  height: 100% !important;  /* Set height to 100% */
+  object-fit: cover;
+  object-position: center; /* Ensures the center of the image is always visible */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering the image */
+}
+
   
   
   /* Контакты */
@@ -175,5 +191,10 @@
       top: auto;
       transform: none;
     }
+
+    .col.set {
+      min-width: 100%; /* Taking the full width for mobile */
+  }
+
   }
     
