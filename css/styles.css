@@ -99,7 +99,8 @@
     transform: translateY(-20%);
   }
 
-  .row.set {
+/* Set Design  */
+.row.set {
     display: flex;
     gap: 1rem; /* Spacing between columns */
     flex-wrap: wrap; /* This allows the items to wrap onto the next line */
